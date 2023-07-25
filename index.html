@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food project2 </title>
+</head>
+<link rel="stylesheet" media="screen and (max-width:1170px)" href="phone.css">
+<style>
+    body {
+        background-image: url('burger.jpg');
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: max-content;
+        b
+    }
+
+    /* css reset */
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    /* css variable */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    #navbar {
+        display: flex;
+        padding: 6px;
+        position: absolute;
+        /* justify-content: center; */
+    }
+
+    #logo {
+        margin: 34px 45px;
+    }
+
+    #logo img {
+        /*
+   
+    top: 2px; */
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        border: 2px solid black;
+        border-radius: 23px;
+        height: 79px;
+        width: 89px;
+
+    }
+
+    #navbar {}
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    #navbar ul {
+        display: flex;
+        padding: 5px;
+    }
+
+    #navbar ul li {
+
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+        display: block;
+        padding: 10px 10px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: aliceblue;
+    }
+
+    /* home section  */
+    #home ::before {
+        content: "";
+        position: absolute;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    .h-primary {
+        font-size: 2.8rem;
+        padding: 12px;
+    }
+
+    #home h1 {
+        color: rgb(214, 48, 36);
+        text-align: center;
+    }
+
+    #home p {
+        color: rgb(250, 244, 244);
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 6px 20px;
+        border: 2px solid rgb(252, 248, 248);
+        background-color: brown;
+        color: aliceblue;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 12px;
+        cursor: pointer;
+
+    }
+
+    .btn:hover {
+        box-shadow: inset 13px 13px 31px lawngreen;
+    }
+
+    /* services section */
+    #services {
+        margin: 34px;
+        display: flex;
+        padding: 12px;
+    }
+
+    .box1 {
+        border: 2px solid brown;
+        border-radius: 24px;
+        box-sizing: border-box;
+        box-shadow: inset;
+        background-color: aliceblue;
+        z-index: -1;
+        opacity: 0.6;
+
+
+    }
+
+    .box1:hover {
+        transform: rotate(42deg);
+    }
+
+    .box1 img {
+        height: 160px;
+        width: 160px;
+        display: block;
+        margin: auto;
+
+        overflow: visible;
+        opacity: 10;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .h-primars-services {
+        text-align: center;
+        color: aliceblue;
+    }
+
+    .h-secondary-center {
+        text-align: center;
+    }
+
+    /* clients section */
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clientitem {
+        /* border: 2px solid brown; */
+        border-radius: 24px;
+        /* box-sizing: border-box; */
+        /* box-shadow:inset; */
+        background-color: rgb(26, 27, 28);
+        z-index: -1;
+        opacity: 0.6;
+        padding: 30px;
+    }
+
+    .clientitem img {
+        height: 140px;
+        width: 217px;
+        display: block;
+        margin: auto;
+
+
+
+
+
+    }
+
+    #client_section {
+        height: 344px;
+    }
+
+    .h-primarycenter {
+        text-align: center;
+        color: aliceblue;
+    }
+
+    /* contact */
+    #contact {
+
+        width: 100%;
+        display: block;
+        margin: auto;
+
+
+    }
+
+    .contactbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+        /* width: 100%; */
+        font-size: 2rem;
+        /* background-image: url("fat-foods-1487599_1280.jpg");
+background-repeat: no-repeat;
+background-size: cover; */
+
+
+
+
+    }
+
+    .contactbox::before {
+        content: "";
+        background: url("contact-us-1524408_1280.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        z-index: -1;
+        /* opacity: 0.5; */
+        overflow: hidden;
+
+
+
+    }
+
+    .contactbox input {
+        padding: 12px;
+
+    }
+
+    .form-group {
+        align-items: center;
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        color: rgb(11, 11, 11);
+        overflow: hidden;
+
+
+    }
+
+    .form-group:hover {
+        color: rgb(16, 214, 249);
+        box-shadow: 3px 3px yellow;
+    }
+
+    .h2-primarycenter {
+        color: #4a0e25;
+        ;
+        text-align: center;
+    }
+
+    .btn1 {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 34%;
+        align-items: center;
+        padding: 12px;
+
+
+
+    }
+
+    .btn1:hover {
+        box-shadow: inset 13px 13px 31px lawngreen;
+    }
+
+    .top {
+        position: absolute;
+        display: flex;
+        top: 3px;
+        right: 2px;
+        padding: 15px;
+
+    }
+
+    .login {
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .login a {
+        text-decoration: none;
+    }
+
+    .Signin {
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .Signin a {
+        text-decoration: none;
+
+    }
+
+    .Signin:hover {
+        box-shadow: inset 13px 13px 31px lawngreen;
+    }
+
+    .login:hover {
+        box-shadow: inset 13px 13px 31px lawngreen;
+    }
+</style>
+
+<body>
+    <div class="top">
+        <button class="login"><a href="">login</a></button>
+        <button class="Signin"> <a href="">Sign in</a></button>
+    </div>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.webp" alt="my online meal" height=50px, width="30px">
+        </div>
+        <ul>
+            <li id="item"><a href="#">HOME</a></li>
+            <li id="item"><a href="#">SERVICES</a></li>
+            <li id="item"><a href="#">ABOUT US</a></li>
+            <li id="item"><a href="form.html">CONTACT US</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="home">
+        <h1 class="h-primary">welcome to my online meal</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quod amet qui fuga tenetur? . </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quod amet qui </p>
+        <button class="btn">Order now</button>
+    </div>
+    <section class="services-container">
+        <h1 class="h-primars-services">Our Services</h1>
+        <div id="services">
+            <div class="box1">
+                <img src="fat-foods-1487599_1280.jpg" alt="">
+                <h2 class="h-secondary-center">
+                    Food Ordering
+                </h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quia magni eligendi,
+                    quidem omnis nulla, totam hic deleniti
+                    incidunt aspernatur numquam delectus architecto voluptas nemo commodi!</p>
+            </div>
+            <div class="box1">
+                <img src="logo2.webp" alt="">
+                <h2 class="h-secondary-center">
+                    Food Catering
+                </h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quia magni eligendi,
+                    quidem omnis nulla, totam hic deleniti
+                    incidunt aspernatur numquam delectus architecto voluptas nemo commodi!</p>
+            </div>
+            <div class="box1">
+                <img src="food truck.png" alt="">
+                <h2 class="h-secondary-center">
+                    Food Delivery
+                </h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quia magni eligendi,
+                    quidem omnis nulla, totam hic deleniti
+                    incidunt aspernatur numquam delectus architecto voluptas nemo commodi!</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="client_section">
+        <h1 class="h-primarycenter">Our Clients</h1>
+        <div id="clients">
+            <div class="clientitem">
+                <img src="microsoft-80658_1280.webp" alt="">
+            </div>
+            <div class="clientitem">
+                <img src="search-engine-76519_1280.webp" alt="">
+            </div>
+            <div class="clientitem">
+                <img src="microsoft-80658_1280.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h2-primarycenter">CONTACT US </h1>
+        <div class="contactbox">
+
+            <form action="">
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="name" placeholder="ENTER YOUR EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact number">name</label>
+                    <input type="tel" name="name" placeholder="ENTER YOUR contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" name="name" placeholder="ENTER YOUR Address" required>
+                </div>
+                <button class="btn1">submit</button>
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    </section>
+</body>
+
+</html>

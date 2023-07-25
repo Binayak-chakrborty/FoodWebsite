@@ -1,0 +1,55 @@
+#navbar{
+flex-direction: column;
+
+
+
+}
+#navbar ul li a {
+font-size: 1rem;
+padding: 0px 7px;
+}
+
+#home{
+    display: flex;
+height: 370px;
+flex-direction: column;
+padding: 3px 68px;
+}
+#home::before{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+     overflow: hidden;
+}
+#home p {
+    font: size 20px; 
+}
+.h-primary{
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#services{
+flex-direction: column;
+}
+#services .box1{
+
+}
+.clientitem{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+#contact{
+    display: flex;
+    flex-wrap: column;
+    height: 400px;
+    overflow: hidden;
+}
+#contact::before{
+    height: 400px;
+    flex-wrap: column;
+    overflow: hidden;
+}
